@@ -1,0 +1,53 @@
+{
+  "events": [
+    {
+      "id": "ohsem-food-festival-2025",
+      "title": "Ohsem Food Festival Melaka",
+      "date": "2025-05-09",
+      "endDate": "2025-05-12",
+      "location": "Mydin Mall Ayer Keroh, Melaka",
+      "description": "A 4-day food and music festival with delicious eats and live performances from Kristal-X, Kazim Band, and One Avenue Band. Open 10 AM – 12 Midnight.",
+      "image": "img/malacca-market.png",
+      "category": "festival"
+    },
+    {
+      "id": "ipoh-greenery-market-0618",
+      "title": "Open Till Dawn · Ipoh Greenery Market",
+      "date": "2025-06-18",
+      "location": "Ipoh Greenery Market, Botani Village",
+      "description": "A rainy night market filled with warmth and music. Street performers sang in the rain, vendors kept their stalls alive, and visitors enjoyed hot food under umbrellas. More than just a market — it was a shared story of resilience, connection, and joy.",
+      "image": "img/ipoh-greenery-market.jpg",
+      "category": "market"
+    },
+    {
+      "id": "penang-food-festival-2025",
+      "title": "Penang Street Food Festival 2025",
+      "date": "2025-08-18",
+      "endDate": "2025-08-23",
+      "location": "Tapak Parkir Landscape A, Prangin Mall, Penang",
+      "description": "6 days of nonstop street food and entertainment in Penang! Enjoy viral street food, artist booths, guest performances, games, and TikTok reviews. Daily from 12 PM – 12 Midnight. The ultimate food & entertainment fiesta for family and friends.",
+      "image": "img/penang-food-festival.png",
+      "category": "festival"
+    },
+    {
+      "id": "havoc-food-festival-2025",
+      "title": "Havoc Merdeka Food Festival 2025",
+      "date": "2025-08-27",
+      "endDate": "2025-08-31",
+      "location": "Dataran Karnival, Stadium Shah Alam",
+      "description": "Celebrate Merdeka at Havoc Food Festival! Featuring 160 trending food vendors, 40 artists & influencers, family activities, and big prizes — including a scooter giveaway. Free entry, from 11 AM to 12 Midnight daily.",
+      "image": "img/havoc-food-festival.png",
+      "category": "festival"
+    },
+    {
+      "id": "merdeka-greenery-market-0829",
+      "title": "Merdeka Day Greenery Market",
+      "date": "2025-08-29",
+      "endDate": "2025-09-01",
+      "location": "Hugh‘s Ipoh (opposite Yuk Choy Primary School)",
+      "description": "Celebrate Malaysia’s Independence Day with a vibrant market! Highlights include 90+ curated stalls, live busker performances, kids’ colouring contest, face painting, DIY flag workshop, dining area, promo deals, and a family-friendly, pet-friendly atmosphere.",
+      "image": "img/merdeka-day-market.jpg",
+      "category": "market"
+    }
+  ]
+}

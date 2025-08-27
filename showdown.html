@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lee Tze Yin, Fong Zi Lin, Goh Yun Ning, Joyce Lau Yu Xuan">
+    <meta name="description" content="Global Food Showdown - Malaysian Street Food Comparisons">
+    <link rel="icon" type="image/icon" sizes="16x16" href="img/favicon.ico">
+    <title>Global Food Showdown - Street Eats</title>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/nav-footer.css">
+    <link rel="stylesheet" href="css/showdown.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Street Eats</a>
+
+            <!-- Hamburger Button -->
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="restaurant.html">Restaurants</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recipe.html">Recipes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="showdown.html">Global Showdown</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contribute.html">Contribute</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="showdown-hero">
+        <div class="container">
+            <h1>Malaysian Street Food: A Global Conversation</h1>
+            <p>Discover how our local favorites stack up against their international cousins.</p>
+        </div>
+    </section>
+
+    <!-- Comparison Navigation -->
+    <section class="comparison-nav">
+        <div class="container">
+            <ul class="nav nav-pills justify-content-center"></ul>
+        </div>
+    </section>
+
+    <!-- Comparison Content -->
+    <section class="comparison-content">
+        <div class="container">
+            <!-- Comparison cards will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <!-- Voting Section -->
+    <section class="voting-section">
+        <div class="container">
+            <h3>Which one wins your heart?</h3>
+            <div class="vote-buttons">
+                <button class="vote-btn vote-food1" data-food="food1">Vote for <span class="food1-name"></span></button>
+                <button class="vote-btn vote-food2" data-food="food2">Vote for <span class="food2-name"></span></button>
+            </div>
+
+            <div class="vote-results">
+                <span class="vote-percentage vote-percentage-food1">0%</span>
+                <div class="vote-progress">
+                    <div class="vote-progress-food1" style="width: 0%"></div>
+                    <div class="vote-progress-food2" style="width: 0%"></div>
+                </div>
+                <span class="vote-percentage vote-percentage-food2">0%</span>
+            </div>
+
+            <div class="vote-thanks mt-3" style="display: none;">
+                <p class="text-success"><i class="fas fa-check-circle me-2"></i>Thanks for your vote!</p>
+            </div>
+
+            <div class="social-sharing mt-4">
+                <a href="#" class="social-btn twitter-share" data-platform="twitter">
+                    <i class="fab fa-twitter"></i> Share on Twitter
+                </a>
+                <a href="#" class="social-btn facebook-share" data-platform="facebook">
+                    <i class="fab fa-facebook-f"></i> Share on Facebook
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light pt-5 pb-3">
+        <div class="container">
+            <div class="row mb-4">
+                <!-- Brand -->
+                <div class="footer-brand col-12 col-md-6 mb-4 mb-md-0">
+                    <h3 class>Street Eats</h3>
+                    <p class=>Exploring Malaysian food culture, one story at a time.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-column col-6 col-md-3 mb-4 mb-md-0">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="restaurant.html">Restaurants</a></li>
+                        <li><a href="recipe.html">Recipes</a></li>
+                        <li><a href="showdown.html">Global Showdown</a></li>
+                        <li><a href="contribute.html">Contribute</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social -->
+                <div class="footer-column col-6 col-md-3 mb-4 mb-md-0">
+                    <h4 class=>Follow</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.instagram.com/streeteats_2025" target="_blank">
+                                <i class="fab fa-instagram me-2"></i>Instagram</a></li>
+                        <li><a href="https://www.facebook.com/share/1JQc5mSFq4/" target="_blank">
+                                <i class="fab fa-facebook me-2"></i>Facebook</a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom -->
+            <div class="footer-legal">
+                <p>&copy; 2025 Street Eats. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script src="js/nav-footer.js"></script>
+    <script src="js/showdown.js"></script>
+</body>
+
+</html>
