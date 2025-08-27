@@ -23,7 +23,7 @@ function loadSavedData() {
     // Load draft from session storage (not affected by cookies consent)
     const draftData = [
         'storyName', 'storyEmail', 'storyTitle', 'storyContent',
-        'photoName', 'photoEmail', 'photoDesc',
+        'photoName', 'photoEmail', 'photoDescription',
         'recipeName', 'recipeEmail', 'recipeTitle', 'recipeIngredients', 'recipeInstructions'
     ];
 
@@ -32,7 +32,6 @@ function loadSavedData() {
         if (value) $(`#${field}`).val(value);
     });
 }
-
 
 // ---------------- Auto Save ------------------
 function setupAutoSave() {
@@ -89,7 +88,7 @@ function validatePhotoForm() {
     const name = $('#photoName').val().trim();
     const email = $('#photoEmail').val().trim();
     const files = $('#photoUpload')[0].files;
-    const description = $('#photoDesc').val().trim();
+    const description = $('#photoDescription').val().trim();
 
     if (!name) { $('#photoNameError').text('Name is required'); isValid = false; }
     if (!email) { $('#photoEmailError').text('Email is required'); isValid = false; }
@@ -102,7 +101,7 @@ function validatePhotoForm() {
             }
         }
     }
-    if (!description) { $('#photoDescError').text('Photo description is required'); isValid = false; }
+    if (!description) { $('#photoDescriptionError').text('Photo description is required'); isValid = false; }
 
     return isValid;
 }
@@ -140,7 +139,7 @@ function clearCookiesIfNotAccepted() {
 function clearDraft(formType) {
     const draftData = {
         story: ['storyName', 'storyEmail', 'storyTitle', 'storyContent'],
-        photo: ['photoName', 'photoEmail', 'photoUpload', 'photoDesc'],
+        photo: ['photoName', 'photoEmail', 'photoUpload', 'photoDescription'],
         recipe: ['recipeName', 'recipeEmail', 'recipeTitle', 'recipeIngredients', 'recipeInstructions']
     };
 
@@ -149,17 +148,24 @@ function clearDraft(formType) {
 
 //-------------- Form validation -----------------
 $(document).ready(function () {
-    //Load the correct tab (from index page)
+    // Load the correct tab (from index page or hash)
     const hash = window.location.hash;
     if (hash) {
-        const tabButton = $(`${hash}-tab`);
-        if (tabButton.length) tabButton.tab('show');
+        // Handle hash-based tab switching
+        const tabId = hash.substring(1); // Remove the # symbol
+        const tabButton = $(`#${tabId}-tab`);
+        if (tabButton.length) {
+            // Use Bootstrap's tab API to show the correct tab
+            const tab = new bootstrap.Tab(tabButton[0]);
+            tab.show();
+        }
     }
     
     loadSavedData();
     setupAutoSave();
     clearCookiesIfNotAccepted();
 
+    // Form submissions
     $('#story-form form').on('submit', function (e) {
         e.preventDefault();
         if (validateStoryForm()) {
@@ -182,5 +188,21 @@ $(document).ready(function () {
             $(this).html('<div class="alert alert-success"><i class="fas fa-check-circle"></i> Thanks! Your recipe has been submitted.</div>');
             clearDraft('recipe');
         }
+    });
+
+    // Handle tab switching manually (for better control)
+    $('button[data-bs-toggle="pill"]').on('click', function(e) {
+        e.preventDefault();
+        
+        // Remove active class from all tabs and panes
+        $('button[data-bs-toggle="pill"]').removeClass('active').attr('aria-selected', 'false');
+        $('.tab-pane').removeClass('show active');
+        
+        // Add active class to clicked tab
+        $(this).addClass('active').attr('aria-selected', 'true');
+        
+        // Show corresponding tab pane
+        const targetPane = $(this).attr('data-bs-target');
+        $(targetPane).addClass('show active');
     });
 });
