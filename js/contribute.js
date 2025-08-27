@@ -149,19 +149,24 @@ function clearDraft(formType) {
 //-------------- Form validation -----------------
 $(document).ready(function () {
     // Load the correct tab (from index page or hash)
-     const hash = window.location.hash;
-    if (hash) {
-        const tabId = hash.substring(1); // e.g. "photo"
-        const tabButton = $(`#${tabId}-tab`);
-        if (tabButton.length) {
-            // Remove any pre-set "active" tab/pane first
-            $('#contributeTabs button').removeClass('active').attr('aria-selected', 'false');
-            $('.tab-pane').removeClass('show active');
+    const hash = window.location.hash;
+    let tabId;
 
-            // Now show the correct tab using Bootstrap API
-            const tab = new bootstrap.Tab(tabButton[0]);
-            tab.show();
-        }
+    if (hash) {
+        tabId = hash.substring(1);
+    } else {
+        tabId = "story";
+    }
+
+    const tabButton = $(`#${tabId}-tab`);
+    if (tabButton.length) {
+        // Clear any pre-set actives
+        $('#contributeTabs button').removeClass('active').attr('aria-selected', 'false');
+        $('.tab-pane').removeClass('show active');
+
+        // Show the right tab
+        const tab = new bootstrap.Tab(tabButton[0]);
+        tab.show();
     }
     
     loadSavedData();
@@ -193,3 +198,4 @@ $(document).ready(function () {
         }
     });
 });
+
