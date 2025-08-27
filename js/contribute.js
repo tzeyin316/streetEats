@@ -14,7 +14,6 @@ function loadSavedData() {
         if (savedName) {
             $('#storyName, #photoName, #recipeName').val(savedName);
         }
-
         if (savedEmail) {
             $('#storyEmail, #photoEmail, #recipeEmail').val(savedEmail);
         }
@@ -29,7 +28,8 @@ function loadSavedData() {
 
     draftData.forEach(field => {
         const value = sessionStorage.getItem(field);
-        if (value) $(`#${field}`).val(value);
+        if (value) 
+            $(`#${field}`).val(value);
     });
 }
 
@@ -149,13 +149,16 @@ function clearDraft(formType) {
 //-------------- Form validation -----------------
 $(document).ready(function () {
     // Load the correct tab (from index page or hash)
-    const hash = window.location.hash;
+     const hash = window.location.hash;
     if (hash) {
-        // Handle hash-based tab switching
-        const tabId = hash.substring(1); // Remove the # symbol
+        const tabId = hash.substring(1); // e.g. "photo"
         const tabButton = $(`#${tabId}-tab`);
         if (tabButton.length) {
-            // Use Bootstrap's tab API to show the correct tab
+            // Remove any pre-set "active" tab/pane first
+            $('#contributeTabs button').removeClass('active').attr('aria-selected', 'false');
+            $('.tab-pane').removeClass('show active');
+
+            // Now show the correct tab using Bootstrap API
             const tab = new bootstrap.Tab(tabButton[0]);
             tab.show();
         }
@@ -188,21 +191,5 @@ $(document).ready(function () {
             $(this).html('<div class="alert alert-success"><i class="fas fa-check-circle"></i> Thanks! Your recipe has been submitted.</div>');
             clearDraft('recipe');
         }
-    });
-
-    // Handle tab switching manually (for better control)
-    $('button[data-bs-toggle="pill"]').on('click', function(e) {
-        e.preventDefault();
-        
-        // Remove active class from all tabs and panes
-        $('button[data-bs-toggle="pill"]').removeClass('active').attr('aria-selected', 'false');
-        $('.tab-pane').removeClass('show active');
-        
-        // Add active class to clicked tab
-        $(this).addClass('active').attr('aria-selected', 'true');
-        
-        // Show corresponding tab pane
-        const targetPane = $(this).attr('data-bs-target');
-        $(targetPane).addClass('show active');
     });
 });
