@@ -10,7 +10,7 @@ let restaurantReviews = null;
 
 // ------------------------------------------- Restaurant Reviews ------------------------------------------
 function loadRestaurantReviews() {
-    $.getJSON('../restaurant_reviews.json')
+    $.getJSON('restaurant_reviews.json')
         .done(function(data) {
             restaurantReviews = data;
             displayRestaurantReviews();
