@@ -1,0 +1,233 @@
+/* Hero Section */
+.contribute-hero {
+  background: linear-gradient(135deg, #d4773c 0%, #b8632f 100%);
+  color: white;
+  padding-top: 140px !important;
+  padding-bottom: 60px !important;
+  text-align: center;
+}
+
+.contribute-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+
+.contribute-hero .lead {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* Pill Navigation Styling */
+.nav-pills {
+  margin-bottom: 2rem;
+}
+
+.nav-pills .nav-link {
+  color: #1d242a;
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-weight: 600;
+  margin: 0 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+  color: #d4773c;
+  background: rgba(212, 119, 60, 0.1);
+  border-color: rgba(212, 119, 60, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(212, 119, 60, 0.2);
+}
+
+.nav-pills .nav-link.active {
+  color: #fff !important;
+  background: linear-gradient(135deg, #d4773c 0%, #b8632f 100%);
+  border-color: #d4773c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(212, 119, 60, 0.3);
+}
+
+.nav-pills .nav-link i {
+  font-size: 1.1rem;
+}
+
+/* Pill Content Styling */
+.tab-content {
+  background: #fff;
+  border-radius: 12px;
+  min-height: 600px;
+}
+
+/* Contribution Forms */
+.contribution-form {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.contribution-form h2 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #d4773c;
+  font-size: 1.8rem;
+}
+
+.contribution-form h2 i {
+  font-size: 1.6rem;
+}
+
+.contribution-form p {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.contribution-form label {
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #333;
+}
+
+.contribution-form input,
+.contribution-form textarea,
+.contribution-form select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contribution-form input:focus,
+.contribution-form textarea:focus,
+.contribution-form select:focus {
+  outline: none;
+  border-color: #d4773c;
+  box-shadow: 0 0 0 3px rgba(212,119,60,0.15);
+}
+
+.contribution-form button {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  background: #d4773c;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.contribution-form button:hover {
+  background: #b8632f;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(212,119,60,0.3);
+}
+
+.contribution-form button:active {
+  transform: translateY(0);
+}
+
+/* Error Messages */
+.error-message {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+/* Success Messages */
+.alert-success {
+  background-color: rgba(40, 167, 69, 0.1);
+  border: 1px solid rgba(40, 167, 69, 0.3);
+  color: #155724;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.alert-success i {
+  color: #28a745;
+}
+
+/* Form Helper Text */
+.form-text {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .contribute-hero {
+    padding-top: 120px !important;
+    padding-bottom: 40px !important;
+  }
+  
+  .contribute-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .contribute-hero .lead {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .contribution-form {
+    margin: 0 1rem;
+    padding: 1.5rem;
+  }
+  
+  .nav-pills .nav-link {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+    margin: 0 4px;
+  }
+  
+  .nav-pills .nav-link i {
+    font-size: 1rem;
+  }
+  
+  .contribution-form h2 {
+    font-size: 1.5rem;
+  }
+  
+  .contribution-form button {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-pills {
+    flex-wrap: wrap;
+  }
+  
+  .nav-pills .nav-link {
+    flex: 1;
+    text-align: center;
+    margin: 4px 2px;
+    font-size: 0.8rem;
+    padding: 8px 12px;
+    min-width: 120px;
+  }
+  
+  .nav-pills .nav-link span {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.7rem;
+  }
+}
