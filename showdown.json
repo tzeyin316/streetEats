@@ -1,0 +1,100 @@
+{
+  "comparisons": [
+    {
+      "id": "nasi-lemak-vs-nasi-uduk",
+      "title": "Nasi Lemak vs Nasi Uduk",
+      "food1": {
+        "name": "Nasi Lemak",
+        "image": "../img/nasi-lemak.jpg",
+        "description": "Malaysia's national dish with coconut rice, sambal, anchovies, peanuts and boiled egg.",
+        "flavorProfile": {
+          "sweetness": 4,
+          "saltiness": 7,
+          "spiciness": 6,
+          "umami": 8,
+          "aroma": 9
+        }
+      },
+      "food2": {
+        "name": "Nasi Uduk",
+        "image": "../img/nasi-uduk.jpeg",
+        "description": "Indonesian coconut rice dish served with various side dishes like fried chicken, tempeh and sambal.",
+        "flavorProfile": {
+          "sweetness": 5,
+          "saltiness": 6,
+          "spiciness": 5,
+          "umami": 7,
+          "aroma": 8
+        }
+      },
+      "votes": {
+        "food1": 65,
+        "food2": 35
+      }
+    },
+    {
+      "id": "char-kway-teow-vs-pad-thai",
+      "title": "Char Kway Teow vs Pad Thai",
+      "food1": {
+        "name": "Char Kway Teow",
+        "image": "../img/char-kway-teow.jpg",
+        "description": "Stir-fried rice noodles with prawns, cockles, Chinese sausage, eggs and beanspruts.",
+        "flavorProfile": {
+          "sweetness": 3,
+          "saltiness": 7,
+          "spiciness": 5,
+          "umami": 9,
+          "aroma": 8
+        }
+      },
+      "food2": {
+        "name": "Pad Thai",
+        "image": "../img/pad-thai.jpg",
+        "description": "Thai stir-fried noodles with eggs, tofu, shrimp, peanuts and tamarind sauce.",
+        "flavorProfile": {
+          "sweetness": 6,
+          "saltiness": 5,
+          "spiciness": 4,
+          "umami": 7,
+          "aroma": 7
+        }
+      },
+      "votes": {
+        "food1": 52,
+        "food2": 48
+      }
+    },
+    {
+      "id": "satay-vs-yakitori",
+      "title": "Satay vs Yakitori",
+      "food1": {
+        "name": "Satay",
+        "image": "../img/satay.jpg",
+        "description": "Malaysian skewered and grilled meat served with peanut sauce and ketupat.",
+        "flavorProfile": {
+          "sweetness": 5,
+          "saltiness": 6,
+          "spiciness": 5,
+          "umami": 8,
+          "aroma": 8
+        }
+      },
+      "food2": {
+        "name": "Yakitori",
+        "image": "../img/yakitori.jpg",
+        "description": "Japanese skewered chicken grilled over charcoal, often seasoned with salt or tare sauce.",
+        "flavorProfile": {
+          "sweetness": 4,
+          "saltiness": 7,
+          "spiciness": 2,
+          "umami": 9,
+          "aroma": 7
+        }
+      },
+      "votes": {
+        "food1": 58,
+        "food2": 42
+      }
+    }
+  ]
+}
