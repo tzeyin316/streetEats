@@ -29,8 +29,8 @@
 
 .contact-methods-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
     margin-bottom: 20px;
 }
 
@@ -78,6 +78,26 @@
     line-height: 1.6;
 }
 
+/* Clickable Card Styles */
+a.contact-method-card.clickable-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+a.contact-method-card.clickable-card:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.contact-method-card.clickable-card p {
+    color: #666;
+}
+
+a.contact-method-card.clickable-card h3 {
+    color: #222;
+}
+
 .contact-email {
     color: #d4773c;
     text-decoration: none;
@@ -88,6 +108,20 @@
 
 .contact-email:hover {
     color: #b8632f;
+}
+
+/* Social Media Links */
+.contact-link {
+    color: #d4773c;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #b8632f;
+    text-decoration: none;
 }
 
 /* Contact Form Section */
@@ -216,6 +250,13 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+    .contact-methods-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 2.2rem;
