@@ -90,7 +90,7 @@ $(document).ready(function() {
         // Create event cards
         events.forEach(ev => {
             // Check if user is interested in this event
-            const isInterested = sessionStorage.getItem(`interested_${ev.id}`) === 'true';
+            const isInterested = localStorage.getItem(`interested_${ev.id}`) === 'true';
             
             // Format date properly using 'date' field from JSON
             let eventDate = new Date(ev.date).toLocaleDateString('en-US', {
@@ -152,13 +152,13 @@ $(document).ready(function() {
             const isCurrentlyInterested = $button.hasClass('interested');
             
             if (isCurrentlyInterested) {
-                sessionStorage.removeItem(`interested_${eventId}`);
+                localStorage.removeItem(`interested_${eventId}`);
                 $button.removeClass('interested');
                 $button.html('<i class="fas fa-star"></i> I\'m Interested!');
                 
                 showNotification('Removed from your interests');
             } else {
-                sessionStorage.setItem(`interested_${eventId}`, 'true');
+                localStorage.setItem(`interested_${eventId}`, 'true');
                 $button.addClass('interested');
                 $button.html('<i class="fas fa-check"></i> Interested');
                 
