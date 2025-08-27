@@ -74,28 +74,28 @@
   <main class="container py-5">
     <ul class="nav nav-pills justify-content-center mb-4" id="contributeTabs" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="story-tab" data-bs-toggle="tab" data-bs-target="#story-form" type="button"
-          role="tab">
+        <button class="nav-link active" id="story-tab" data-bs-toggle="pill" data-bs-target="#story-form" type="button"
+          role="tab" aria-controls="story-form" aria-selected="true">
           <i class="fas fa-pen-nib me-2"></i>Pitch a Story
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="photo-tab" data-bs-toggle="tab" data-bs-target="#photo-form" type="button"
-          role="tab">
+        <button class="nav-link" id="photo-tab" data-bs-toggle="pill" data-bs-target="#photo-form" type="button"
+          role="tab" aria-controls="photo-form" aria-selected="false">
           <i class="fas fa-camera me-2"></i>Submit Photos
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="recipe-tab" data-bs-toggle="tab" data-bs-target="#recipe-form" type="button"
-          role="tab">
+        <button class="nav-link" id="recipe-tab" data-bs-toggle="pill" data-bs-target="#recipe-form" type="button"
+          role="tab" aria-controls="recipe-form" aria-selected="false">
           <i class="fas fa-utensils me-2"></i>Share Recipe
         </button>
       </li>
     </ul>
 
-    <div class="tab-content">
+    <div class="tab-content" id="contributeTabContent">
       <!-- Story Form -->
-      <div class="tab-pane fade show active" id="story-form" role="tabpanel">
+      <div class="tab-pane fade show active" id="story-form" role="tabpanel" aria-labelledby="story-tab">
         <div class="contribution-form">
           <h2><i class="fas fa-pen-nib me-2"></i>Pitch a Story</h2>
           <p>Share your food stories, restaurant reviews, or culinary insights with our readers.</p>
@@ -126,7 +126,7 @@
       </div>
 
       <!-- Photo Form -->
-      <div class="tab-pane fade" id="photo-form" role="tabpanel">
+      <div class="tab-pane fade" id="photo-form" role="tabpanel" aria-labelledby="photo-tab">
         <div class="contribution-form">
           <h2><i class="fas fa-camera me-2"></i>Submit Photos</h2>
           <p>Contribute high-quality food photography to illustrate our stories and guides.</p>
@@ -159,7 +159,7 @@
       </div>
 
       <!-- Recipe Form -->
-      <div class="tab-pane fade" id="recipe-form" role="tabpanel">
+      <div class="tab-pane fade" id="recipe-form" role="tabpanel" aria-labelledby="recipe-tab">
         <div class="contribution-form">
           <h2><i class="fas fa-utensils me-2"></i>Share a Recipe</h2>
           <p>Submit your favourite family or street food recipes to our collection.</p>
@@ -243,8 +243,8 @@
   </footer>
 
   <script src="js/nav-footer.js"></script>
-  <script src="js/contribute.js"></script>
   <script src="js/cookies.js"></script>
+  <script src="js/contribute.js"></script>
 
 </body>
 
