@@ -73,7 +73,7 @@ $(document).ready(function () {
       // Content
       if (Array.isArray(review.content)) {
         review.content.forEach((item) => {
-          if (\.(jpg|jpeg|png|gif)$/i.test(item)) {
+          if (/\.(jpg|jpeg|png|gif)$/i.test(item)) {
             $contentContainer.append(
               `<img src="${item}" alt="${review.titleMain || "review"} image" class="img-fluid my-4 rounded">`
             );
@@ -89,3 +89,4 @@ $(document).ready(function () {
     });
 
 });
+
